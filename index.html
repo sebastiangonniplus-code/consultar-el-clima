@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Clima - FastAPI</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm p-4">
+                    <h2 class="text-center mb-4">🌦️ Consultar Clima</h2>
+                    
+                    <!-- Formulario de búsqueda -->
+                    <div class="input-group mb-3">
+                        <input type="text" id="ciudadInput" class="form-control" placeholder="Ej. Buenos Aires, Cordoba...">
+                        <button class="btn btn-primary" onclick="consultarClima()">Buscar</button>
+                    </div>
+
+                    <!-- Contenedor del Resultado -->
+                    <div id="resultado" class="mt-4 d-none">
+                        <div class="card bg-white border-primary p-3">
+                            <h4 id="resCiudad" class="text-primary"></h4>
+                            <p class="mb-1"><strong>Temperatura:</strong> <span id="resTemp"></span> °C</p>
+                            <p class="mb-1"><strong>Sensación Térmica:</strong> <span id="resSensacion"></span> °C</p>
+                            <p class="mb-1"><strong>Humedad:</strong> <span id="resHumedad"></span>%</p>
+                            <p class="mb-0"><strong>Estado:</strong> <span id="resDesc" class="text-capitalize"></span></p>
+                        </div>
+                    </div>
+
+                    <!-- Mensaje de Error -->
+                    <div id="errorMsg" class="alert alert-danger mt-3 d-none" role="alert"></div>
+                </div>
+            </div>
+        </div>
+    </div>
