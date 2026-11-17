@@ -13,7 +13,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],  # Permite todos los métodos (GET, POST, etc.)
     allow_headers=["*"],
-
+)
 
 api_cliente = os.getenv("WEATHER_API_KEY")
 
